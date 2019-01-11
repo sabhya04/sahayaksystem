@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="shortcut icon" href="images/favicon.png" ></link>
+	<link href="css/bootstrap.min.css" rel="stylesheet" >
+	<link href="css/bootstrap.css" rel="stylesheet" >
+	<link href="css/Default.css" rel="stylesheet" >	
+	<script type="text/javascript"  src="js/jquery.js"></script>
+	<script>
+
+		$(document).ready(function()
+		{
+			//alert($(window).width());
+			var x=(($(window).width())-1024)/2;
+			//alert(x);
+			$('.wrap').css("left",x+"px");
+		});
+		$(window).resize(function(){
+			var x=(($(window).width())-1024)/2;
+			//alert(x);
+			$('.wrap').css("left",x+"px");
+		});
+	</script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="js/bootstrap.js"></script>-->
+	<script type="text/javascript" src=""js/man.js"></script>
+</head>
+
+<body onload="$('#myCarousel').carousel()">
+	<div class="wrap">
+		<div class="header">
+			<div style="float:left;width:150px;">
+				<img src="images/logo.png"/>
+			</div>		
+			<div style="float:right; font-size:20px;margin-top:20px;">
+						<h3> Welcome </h3>
+						
+						<div class="dropdown">
+    					<button class="btn btn-info" type="button" data-toggle="dropdown">Login
+    					<span class="caret"></span></button>
+    					<ul class="dropdown-menu">
+      					<li><a href="LoginSahayak.html">Sahayak</a></li>
+      					<li><a href="LoginUser.html">User</a></li>
+    					</ul>
+  						
+						<a href="#" class="btn btn-info">Logout</a>
+						</div>
+
+			</div>
+			<div id="heading">
+				<a href="#">Sahayak</a>
+			</div>
+		</div>
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container" >
+				<a class="brand" href="Sahayak.html" >HOME</a>
+				<a class="brand" href="reservation.html">BOOK COOLIE</a>
+		
+						<a class="brand" href="display.html">TRANSACTIONS</a>
+				<a class="brand" href="contact.html">CONTACT</a>
+				</div>
+			</div>
+		</div>
+				<!-- registration form -->
+		<div align="center">
+		<div class="span12 well">
+		<div style="font-size:30px;">User Signup</div>
+		<br/>
+		
+		
+		<div class="table">
+		<form name="signup" action="SignUpSahayak.jsp" method="POST"  >
+		<table>
+		<tr>
+			<td style="border-top:0px;"> First Name <font color=red>* </font></td>
+			<td style="border-top:0px;"><input type="text" name="fname" class="input-block-level" placeholder="Enter the First name" onblur="return name1()" pattern="[A-Za-z]{1,15}" title="Name must contain alphabets only and must be between 1-15 characters" required><span id="fn"></span></td>
+		</tr>
+		<tr>
+			<td style="border-top:0px;"> Last Name <font color=red>* </font> </td>
+			<td style="border-top:0px;"><input type="text" name="lname" class="input-block-level" placeholder="Enter the Last name" onblur="return name12()" pattern="[A-Za-z]{1,15}" title="Name must contain alphabets only and must be between 1-15 characters" required><span id="ln"></span></td>
+		</tr>
+		<tr>
+			<td style="border-top:0px;"> Email ID <font color=red>* </font> </td>
+			<td style="border-top:0px;"><input type="email" class="input-block-level" name="email" placeholder="Enter the valid email id" required></td>
+		</tr>
+		<tr>
+			<td style="border-top:0px;"> City <font color=red>* </font></td>
+			<td style="border-top:0px;"><input type="text" name="city" class="input-block-level" placeholder="Enter the First name" onblur="return name1()" pattern="[A-Za-z]{1,15}" required><span id="fn"></span></td>
+		</tr>
+		<tr>
+			<td style="border-top:0px;"> Password <font color=red>* </font> </td>
+			<td style="border-top:0px;"><input type="password" class="input-block-level" name="pass" placeholder="Enter the password" onblur="return check1()" pattern=".{5,10}" id="ps" title="password must be between 5 and 10 characters" required> </td>
+		</tr>
+		
+		<tr>
+			<td style="border-top:0px;"> Confirm Password <font color=red>* </font> </td>
+			<td style="border-top:0px;"><input type="password" class="input-block-level" name="cpass" id="cps" placeholder="confirm the password" onblur="return confirm1()" required></td>
+		</tr>
+		
+		<tr>
+			<td style="border-top:0px;"> Gender <font color=red>* </font> </td>
+			<td style="border-top:0px;"><select name="gender">
+				<option value="male">MALE</option>
+				<option value="female">FEMALE</option>
+			    </select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td style="border-top:0px;">Marital Status <font color=red>* </font> </td>
+			<td style="border-top:0px;"><select name="martial_status">
+				<option value="married">Married</option>
+				<option value="unmarried">Unmarried</option>
+			    </select>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top:0px;"> Date of Birth <font color=red>* </font></td>
+			<td style="border-top:0px;"><input type="date" min="1950-01-01" max="2017-12-31" class="input-medium"  name="dob" required></td>
+		</tr>
+		
+		<tr>
+			<td style="border-top:0px;"> Mobile No. <font color=red>*</font> </td>
+			<td style="border-top:0px;"> +91 <input type="text" class="input-block-level"  name="mobile_no" placeholder="" onblur="return mobile1()" pattern="[0-9]{10}" title="Field must contain numbers only" required> <span id="mn"></span></td>
+		</tr>
+		<tr>
+			<td style="border-top:0px;"><input class="btn btn-info"type="submit" value="submit" id="subb" ></td>
+			<td style="border-top:0px;"><input class="btn btn-info"type="reset" value="Reset"></td>
+		</tr>
+		
+		</table>
+		</form>
+		</div>
+		</div>
+		</div>
+		<footer >
+			<div style="width:100%;">
+				<div style="float:left;">
+					<p class="text-right text-info">  &copy; CSE 5th Sem..</p>	
+				</div>
+			</div>
+		</footer>
+	</div>
+	
+	
+	<script>
+	var ps = document.getElementById("ps")
+	, cps = document.getElementById("cps");
+	function validatePassword(){
+		if(ps.value != cps.value){
+			cps.setCustomValidity("Password Don't Match");
+		}
+		else{
+			cps.setCustomValidity('');
+		}
+		}
+	ps.onchange = validatePassword;
+	ps.onkeyup = validatePassword;
+	</script>
+</body>
+</html>

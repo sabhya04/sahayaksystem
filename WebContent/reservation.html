@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="shortcut icon" href="images/favicon.png" ></link>
+	<link href="css/bootstrap.min.css" rel="stylesheet" >
+	<link href="css/bootstrap.css" rel="stylesheet" >
+	<link href="css/Default.css" rel="stylesheet" >	
+	<script type="text/javascript"  src="js/jquery.js"></script>
+	<script>
+
+		$(document).ready(function()
+		{
+			//alert($(window).width());
+			var x=(($(window).width())-1024)/2;
+			//alert(x);
+			$('.wrap').css("left",x+"px");
+		});
+		$(window).resize(function(){
+			var x=(($(window).width())-1024)/2;
+			//alert(x);
+			$('.wrap').css("left",x+"px");
+		});
+	</script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="js/bootstrap.js"></script>-->
+	<script type="text/javascript" src=""js/man.js"></script>
+</head>
+
+<body onload="$('#myCarousel').carousel()">
+	<div class="wrap">
+		<div class="header">
+			<div style="float:left;width:150px;">
+				<img src="images/logo.png"/>
+			</div>		
+			<div style="float:right; font-size:20px;margin-top:20px;">
+						<h3> Welcome </h3>
+						
+						<div class="dropdown">
+    					<button class="btn btn-info" type="button" data-toggle="dropdown">Login
+    					<span class="caret"></span></button>
+    					<ul class="dropdown-menu">
+      					<li><a href="LoginSahayak.html">Sahayak</a></li>
+      					<li><a href="LoginUser.html">User</a></li>
+    					</ul>
+  						
+						<a href="#" class="btn btn-info">Logout</a>
+						</div>
+
+			</div>
+			<div id="heading">
+				<a href="#">Sahayak</a>
+			</div>
+		</div>
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container" >
+				<a class="brand" href="Sahayak.html" >HOME</a>
+				<a class="brand" href="#">BOOK COOLIE</a>
+				
+						<a class="brand" href="display.html">TRANSACTIONS</a>
+				<a class="brand" href="contact.html">CONTACT</a>
+				</div>
+			</div>
+		</div>
+		
+
+	<div class="row">
+		<!-- find sahayak   -->
+		<div class="span4 well">
+			<form method="POST" action="searchSahayak">
+				<table class="table">
+					    
+						
+						
+						
+							<th style="border-top:0px;"><label>Search Sahayak</label></th>	
+							<td style="border-top:0px;">
+							<input  class="input-block-level" name="city" >
+							<!-- 
+								<datalist id="boarding">
+								
+									<option value="    ">     </option>
+								</datalist>
+								 -->
+							</td>
+						</tr>
+
+					
+					<!-- 	<tr>
+							<th style="border-top:0px;"><label> Date</label></th>
+							<td style="border-top:0px;">
+								<input class="input-block-level input-medium" name="doj" id="date" placeholder="Date" type="date" value="{% now 'Y-m-d' %}" min="{% now 'Y-m-d' %}" max="{{ dt }}">
+							</td>
+						</tr>
+						 -->
+						<tr>
+							<td style="border-top:0px;"><input class="btn btn-info" type="submit" value="OK"></td>
+							<td style="border-top:0px;"><a href="/reservation" class="btn btn-info" type="reset" value="Reset">Reset</a></td>
+						</tr>
+				</table>
+			</form>
+		</div>
+		<!-- display coolie
+		<div class="span8 well" style="overflow:auto;">
+			<table class="table">
+			<tr>
+				<th style="border-top:0px;"> Coolie Id.</th>
+				<th style="border-top:0px;"> Coolie Name </th>
+				<th style="border-top:0px;"> Capacity </th>
+				<th style="border-top:0px;"> Book </th>
+			</tr>
+				
+						<tr class="text-error">
+							<td > </td>
+							<td > 
+							<a href="/reservation_details?train_num={{j.train_number}}&from={{retained_data.boarding_station}}&to={{retained_data.destination_station}}&doj={{retained_data.doj}}&quota={{retained_data.quota}}">    </a></td>
+							<td >  </td>
+							<td >  </td>
+						</tr>
+					</table>
+			</table>
+			 -->
+			<div class=\"alert alert-error\"  style=\"margin:100px 180px;\"> please search the Coolie</div>
+				</div>
+
+	</div>
+</di>

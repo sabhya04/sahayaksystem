@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<link rel="shortcut icon" href="images/favicon.png" ></link>
+	<link href="css/bootstrap.min.css" rel="stylesheet" >
+	<link href="css/bootstrap.css" rel="stylesheet" >
+	<link href="css/Default.css" rel="stylesheet" >
+	<script type="text/javascript"  src="js/jquery.js"></script>
+	<script>
+
+		$(document).ready(function()
+		{
+			//alert($(window).width());
+			var x=(($(window).width())-1024)/2;
+			//alert
+			(x);
+			$('.wrap').css("left",x+"px");
+		});
+		$(window).resize(function(){
+			var x=(($(window).width())-1024)/2;
+			//alert(x);
+			$('.wrap').css("left",x+"px");
+		});
+	</script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- <script type="text/javascript" src="js/bootstrap.js"></script> -->
+	<script type="text/javascript" src=""js/man.js"></script>
+</head>
+<body onload="$('#myCarousel').carousel()">
+	<div class="wrap">
+		<div class="header">
+			<div style="float:left;width:150px;">
+				<img src="images/logo.png"/>
+			</div>		
+			<div style="float:right; font-size:20px;margin-top:20px;">
+						<h3> Welcome </h3>
+
+						<div class="dropdown">
+    					<button class="btn btn-info" type="button" data-toggle="dropdown">Login
+    					<span class="caret"></span></button>
+    					<ul class="dropdown-menu">
+      					<li><a href="LoginSahayak.html">Sahayak</a></li>
+      					<li><a href="LoginUser.html">User</a></li>
+    					</ul>
+  						
+						<a href="#" class="btn btn-info">Logout</a>
+						</div>
+
+
+			</div>
+			<div id="heading">
+				<a href="#">Sahayak</a>
+			</div>
+		</div>
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container" >
+				<a class="brand" href="Sahayak.html">HOME</a>
+				<a class="brand" href="reservation.html">BOOK COOLIE</a>
+				
+				<a class="brand" href="display.html">TRANSACTIONS</a>
+				<a class="brand" href="contact.html">CONTACT</a>
+				</div>
+			</div>
+		</div>
+		<!-- Login and signup -->
+		<div align="center">
+		
+			<div  class=" well login">
+				<form class="form-signin " action="LoginUser" method="POST">
+				<table class="table" style="margin-bottom:4px;">
+				<tr>
+					<td style="border-top:0px;"><label> Username</label></td>
+					<td style="border-top:0px;"> <input type="text" name="id" class="input-block-level" placeholder="Username"></td>
+				</tr>
+				<tr>
+					<td style="border-top:0px;"> <label>Password</label></td>
+					<td style="border-top:0px;"><input type="password" name="pass" class="input-block-level" placeholder="Password"></td>
+				</tr>
+				
+				<tr>
+					<td style="border-top:0px;"></td>
+					<td style="border-top:0px;"> <input class="btn btn-info" type="submit" value="Login" ></td>
+				</tr>
+
+				<tr>
+					<td colspan="2" style="border-top:0px;"> 
+						<p>  Don't have an account?&nbsp;
+							<div class="dropdown">
+    						<button class="btn btn-info" type="button" data-toggle="dropdown">Register
+    						<span class="caret"></span></button>
+    						<ul class="dropdown-menu">
+      						<li><a href="signupsahayak.html">Sahayak</a></li>
+      						<li><a href="signupuser.html">User</a></li>
+    						</ul>
+    					</div>
+						</p>
+						
+					</td>
+				</tr>
+				</table>
+				</form>
+				</div>
+			
+		</div>
+<footer >
+			<div style="width:100%;">
+				<div style="float:left;">
+					<p class="text-right text-info">  &copy; CSE 5th Sem.</p>	
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
